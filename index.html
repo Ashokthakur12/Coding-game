@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thunderstorm Animation</title>
+    <title>Thunderstorm Animation - Jayesh</title>
     <style>
         body {
             margin: 0;
@@ -14,8 +14,25 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
 
+        /* Stylish name animation */
+        .name {
+            font-family: 'Arial', sans-serif;
+            font-size: 60px;
+            color: #fff;
+            text-align: center;
+            animation: glow 1.5s infinite alternate;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px #ff004d, 0 0 50px #ff004d;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.8), 0 0 20px #ff004d; }
+            100% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.8), 0 0 35px rgba(255, 255, 255, 0.8), 0 0 40px #ff004d, 0 0 50px #ff004d; }
+        }
+
+        /* Thunderstorm animation */
         .thunder {
             position: absolute;
             top: 0;
@@ -35,6 +52,7 @@
             100% { opacity: 0; }
         }
 
+        /* Lightning flash effect */
         .flash {
             position: absolute;
             top: 0;
@@ -58,6 +76,10 @@
     </style>
 </head>
 <body>
+    <!-- Name of Jayesh with glowing effect -->
+    <div class="name">Jayesh</div>
+    
+    <!-- Thunderstorm elements -->
     <div class="thunder"></div>
     <div class="flash"></div>
     <audio class="thunder-sound" id="thunderSound" src="thunder-sound.mp3" preload="auto"></audio>
